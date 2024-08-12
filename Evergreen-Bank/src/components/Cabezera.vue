@@ -14,6 +14,11 @@ import { RouterLink } from 'vue-router';
 
 </script>
 <style scoped>
+.navbar {
+  width: 100%;
+  display: fixed;
+  top: 0px;
+}
 .navbar-brand {
   color: #D8F2DC;
 }
