@@ -1,9 +1,9 @@
 <template>
- <AuthVue />
+ <FormClient />
 </template>
 
 <script setup>
-import AuthVue from "./views/AuthVue.vue";
+import FormClient from './views/FormClient.vue';
 
 </script>
 
