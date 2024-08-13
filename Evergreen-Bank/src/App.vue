@@ -1,9 +1,9 @@
 <template>
- <FormClient />
+    <form-solicitud />
 </template>
 
 <script setup>
-import FormClient from './views/FormClient.vue';
+import FormSolicitud from './views/FormSolicitud.vue';
 
 </script>
 

@@ -54,27 +54,24 @@
         </div>
         <!--v-for:5-->
         <div class="form-group">
-        <label for="inputState">Estado Civil</label>
-          <select id="inputState" class="form-select">
+        <label for="EstadoCivil">Estado Civil</label>
+          <select id="EstadoCivil" class="form-select">
           <option selected>none</option>
           <option value="Casado">Casado</option>
-          <option value="Soltero">Soltero</option>
           </select>
         </div>
 
         <!--v-for:5-->
         <div class="form-group">
-        <label for="inputState">Ciudad</label>
-          <select id="inputState" class="form-select">
+        <label for="Ciudad">Ciudad</label>
+          <select id="Ciudad" class="form-select">
           <option selected>none</option>
           <option value="a">a</option>
-          <option value="e">e</option>
           </select>
         </div>
 
         <div class="button-group">
-          <button type="submit" class="btn-submit">IR ATRAS</button>
-          <button type="button" class="btn-submit">SIGUIENTE</button>
+          <button type="button" class="btn-submit">GUARDAR</button>
         </div>
 
       </form>
@@ -82,9 +79,7 @@
   </template>
   
   <script>
-import Cabezera from './Cabezera.vue';
   export default {
-  components: { Cabezera },
     name: 'App',
     data() {
       return {

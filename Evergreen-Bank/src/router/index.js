@@ -21,6 +21,11 @@ const router = createRouter({
       name: 'register',
       component: FormClient
     },
+    {
+      path: '/solicitud',
+      name: 'solicitud',
+      component: FormClient
+    }
     
 
   ]

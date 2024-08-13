@@ -17,7 +17,7 @@
 .nav{
  background-color: #198754;
  text-align: center;
-height: 1132px;
+height: 1000px;
 width: 180px;
 }
 .btn{
