@@ -1,56 +1,89 @@
 <template>
     <div id="app">
-        <h1 class="title">{{ title }}</h1>
-        <form @submit.prevent="submitForm">
+        <h1 class="title">NUEVA SOLICITUD</h1>
+        <form>
+          <h2 class="title">Datos Laborales</h2>
+        <div class="form-group">
+          <label for="Cargo"> Cargo</label>
+          <input type="text" id="cargo" v-model="cargo" placeholder="Cargo">
+        </div>
+        
+        <div class="form-group input-group mb-3">
+        <label for="Ingreso">Ingreso</label>
+          <span class="input-group-text">L</span>
+          <input type="text" class="form-control" v-model="ingreso">
+            <span class="input-group-text">.00</span>
+        </div>
 
         <div class="form-group">
-          <label for="DNI"> DNI Cliente</label>
-          <input type="text" id="name" v-model="form.name" placeholder="DNI Cliente">
+          <label for="Cargo"> Lugar de Trabajo</label>
+          <input type="text" id="LugarTrabajo" v-model="lugarTrabajo" placeholder="Lugar de Trabajo">
         </div>
-        <!--v-for empleado-->
+
         <div class="form-group">
-        <label for="EstadoCivil">Empleado</label>
-          <select id="EstadoCivil" class="form-select">
-          <option selected>Seleccione uno</option>
-          <option value="aa">aa</option>
-          </select>
+          <label for="fechaIngreso">Fecha de Ingreso</label>
+          <input type="date" v-model="fechaIngreso" />
         </div>
+
+      
 
         <!--v-for tipoProducto-->
         <div class="form-group">
         <label for="TipoProducto">Tipo Producto</label>
-          <select id="TipoProducto" class="form-select">
+          <select id="TipoProducto" class="form-select" v-model="tipoProducto">
           <option selected>Seleccione uno</option>
           <option value="bb">bb</option>
           </select>
         </div>
 
+        <h2 class="title">Referencia</h2>
+        <div class="form-group">
+          <label for="PrimerNombre"> Primer Nombre</label>
+          <input type="text" id="PrimerNombre" v-model="primerNombre" placeholder="Primer Nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="PrimerApellido"> Primer Apellido</label>
+          <input type="text" id="PrimerApellido" v-model="primerApellido" placeholder="Primer Apellido">
+        </div>
+
+        <div class="form-group">
+          <label for="TelResi"> Telefono Residencial</label>
+          <input type="text" id="TelResi" v-model="telResi" placeholder="Telefono Residencial">
+        </div>
+
+        <div class="form-group">
+          <label for="TelCel"> Telefono Celular</label>
+          <input type="text" id="TelCel" v-model="telCel" placeholder="Telefono Celular">
+        </div>
+
+        <div class="form-group">
+          <label for="Relacion"> Relacion</label>
+          <input type="text" id="Relacion" v-model="relacion" placeholder="Relacion">
+        </div>
+
         <div class="button-group">
-          <button type="button" class="btn-submit">GUARDAR</button>
+          <button type="button" class="btn-submit" @click.prevent="">ENVIAR</button>
         </div>
         </form>
     </div>
 </template>
     
 
-<script>
- export default {
-    name: 'App',
-    data() {
-      return {
-        title: "NUEVA SOLICITUD",
-        form: {
-          DNI: '',
-        }
-      };
-    },
-    methods: {
-      submitForm() {
-        // Handle form submission (e.g., validation, sending data to a server)
-       console.log("Form submitted:", this.form);
-      }
-    }
-  }
+<script setup>
+    import { ref } from 'vue';
+
+      let cargo = ref ('')
+      let ingreso = ref ('')
+      let lugarTrabajo = ref ('')
+      let fechaIngreso = ref ('')
+      let tipoProducto = ref ('')
+      let primerNombre = ref ('')
+      let primerApellido = ref ('')
+      let telResi = ref ('')
+      let telCel = ref ('')
+      let relacion = ref ('')
+
 
 </script>
 

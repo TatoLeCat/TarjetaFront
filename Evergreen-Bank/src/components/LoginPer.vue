@@ -32,7 +32,7 @@
 
     const AuthUser = async () => {
         const auth = new AuthService()
-        const success = await auth.login(user.value, password.value)  
+        const success = await auth.loginPersonal(user.value, password.value)  
         if (success){
 
         }else{

@@ -3,59 +3,56 @@
       <h1 class="title">{{ title }}</h1>
       <form @submit.prevent="submitForm">
         <div class="form-group">
-          <label for="primer nombre"> Primer Nombre</label>
-          <input type="text" id="name" v-model="form.name" placeholder="Primer Nombre">
+          <label for="PrimerNombre"> Primer Nombre</label>
+          <input type="text" id="PrimerNombre" v-model="primerNombre" placeholder="Primer Nombre">
         </div>
   
         <div class="form-group">
-          <label for="segundo nombre">Segundo Nombre</label>
-          <input type="text" id="segundo nombre" v-model="form.name" placeholder="Segundo Nombre">
+          <label for="SegundoNombre">Segundo Nombre</label>
+          <input type="text" id="segundoNombre" v-model="segundoNombre" placeholder="Segundo Nombre">
         </div>
   
         <div class="form-group">
-          <label for="primer apellido">Primer Apellido</label>
-          <input type="tel" id="phone" v-model="form.phone" placeholder="Primer Apellido">
+          <label for="primerApellido">Primer Apellido</label>
+          <input type="tel" id="PrimerApellido" v-model="primerApellido" placeholder="Primer Apellido">
         </div>
   
         <div class="form-group">
-          <label for="segundo apellido">Segundo Apellido</label>
-          <input type="text" id="address" v-model="form.address" placeholder="Segundo Apellido">
+          <label for="segundoApellido">Segundo Apellido</label>
+          <input type="text" id="SegundoApellido" v-model="segundoApellido" placeholder="Segundo Apellido">
         </div>
   
         <div class="form-group">
           <label for="DNI">Numero Identidad </label>
-          <input type="text" id="address" v-model="form.address" placeholder="Numero Identidad">
+          <input type="text" id="DNI" v-model="dni" placeholder="Numero Identidad">
         </div>
   
         <div class="form-group">
-          <label for="DNI">Telefono </label>
-          <input type="text" id="address" v-model="form.address" placeholder="Telefono">
+          <label for="Telefono">Telefono </label>
+          <input type="text" id="Telefono" v-model="telHogar" placeholder="Telefono Celular">
         </div>
 
         <div class="form-group">
-          <label for="DNI">Celular </label>
-          <input type="text" id="address" v-model="form.address" placeholder="Celular">
+          <label for="Celular">Celular </label>
+          <input type="text" id="Celular" v-model="telCel" placeholder="Celular">
         </div>
 
         <div class="form-group">
-          <label for="GENERO">Género</label> <br>
-          <div style="display: flex; align-items: center;">
-            <input type="radio" id="MASCULINO" name="genero" value="masculino">
-            <label for="MASCULINO" style="margin-right: 20px;">Masculino</label>
-  
-            <input type="radio" id="FEMENINO" name="genero" value="femenino">
-            <label for="FEMENINO">Femenino</label>
-          </div>
+          <label for="Genero">Género</label>
+          <select id="genero" class="form-select" v-model="genero">
+          <option selected>none</option>
+          <option value="Casado">Casado</option>
+          </select>
         </div>
   
         <div class="form-group">
-          <label for="email">Correo Electronico</label> <br>
-          <input type="email" id="email" name="email" placeholder="Correo Electronico" required>
+          <label for="email">Correo Electronico</label>
+          <input type="email" id="email" name="email" placeholder="Correo Electronico" required v-model="correo">
         </div>
         <!--v-for:5-->
         <div class="form-group">
         <label for="EstadoCivil">Estado Civil</label>
-          <select id="EstadoCivil" class="form-select">
+          <select id="EstadoCivil" class="form-select" v-model="estadoCivil">
           <option selected>none</option>
           <option value="Casado">Casado</option>
           </select>
@@ -64,7 +61,7 @@
         <!--v-for:5-->
         <div class="form-group">
         <label for="Ciudad">Ciudad</label>
-          <select id="Ciudad" class="form-select">
+          <select id="Ciudad" class="form-select" v-model="ciudad">
           <option selected>none</option>
           <option value="a">a</option>
           </select>
@@ -78,27 +75,20 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'App',
-    data() {
-      return {
-        title: "DATOS PERSONALES CLIENTE",
-        form: {
-          name: '',
-          email: '',
-          phone: '',
-          address: ''
-        }
-      };
-    },
-    methods: {
-      submitForm() {
-        // Handle form submission (e.g., validation, sending data to a server)
-       console.log("Form submitted:", this.form);
-      }
-    }
-  }
+  <script setup>
+  import { ref } from 'vue';
+    let primerNombre = ref ('')
+    let segundoNombre = ref ('')
+    let primerApellido = ref ('')
+    let segundoApellido = ref ('')
+    let dni = ref ('')
+    let telHogar = ref ('')
+    let telCel = ref ('')
+    let correo = ref ('')
+    let genero = ref ('')
+    let estadoCivil = ref ('')
+    let ciudad = ref ('')
+
   </script>
   
   
