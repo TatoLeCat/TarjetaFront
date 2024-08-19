@@ -1,11 +1,15 @@
+import { ref } from "vue"
 
 
 
 export default class AuthService {
+    session
     constructor (){
-       
+       this.session = ref([])
     }
-
+    getSession() {
+        return this.session
+    }
 
     async login (user, password){
         try {
@@ -22,7 +26,8 @@ export default class AuthService {
             })
 
             const response = await res.json()
-            //falta tratar respuesta
+            this.session = await response
+            
 
         } catch(error) {
             console.log(error)
@@ -44,7 +49,7 @@ export default class AuthService {
             })
 
             const response = await res.json()
-            //falta tratar respuesta
+            this.session = await response
 
         } catch(error) {
             console.log(error)

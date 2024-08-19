@@ -4,7 +4,7 @@
     <p> ¿Eres un?</p>
 
     <div class="button-group">
-        <router-link to="/login">Cliente</router-link>|
+        <router-link to="/login">Cliente</router-link> |
         <router-link to="/loginPersonal">Empleado</router-link>
     </div>
 
@@ -25,5 +25,11 @@
      top: 30px;
      left: 70%;
   }
+
+  a {
+      font-weight: bold;
+      color: #2c3e50;
+  }
+  
 </style>
 
