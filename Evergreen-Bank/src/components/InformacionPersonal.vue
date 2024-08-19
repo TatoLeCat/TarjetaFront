@@ -1,7 +1,7 @@
 <template>
     <div id="app">
       <h1 class="title">{{ title }}</h1>
-      <form @submit.prevent="submitForm">
+      <form>
         <div class="form-group">
           <label for="PrimerNombre"> Primer Nombre</label>
           <input type="text" id="PrimerNombre" v-model="primerNombre" placeholder="Primer Nombre">
@@ -68,7 +68,7 @@
         </div>
 
         <div class="button-group">
-          <button type="button" class="btn-submit">GUARDAR</button>
+          <button type="button" class="btn-submit" @click.prevent="">GUARDAR</button>
         </div>
 
       </form>

@@ -1,18 +1,15 @@
-const { ref } = require("vue");
 
 
-class AuthService {
+
+export default class AuthService {
     constructor (){
-        this.token = ref('')
+       
     }
 
-    getToken(){
-        return this.token
-    } 
 
     async login (user, password){
         try {
-            const res = await fetch('/api/logincliente', {
+            const res = await fetch(`${process.env.VUE_APP_API}/logincliente`, {
                 method: 'POST', 
                 headers: {
                     'Accept': 'application/json',
@@ -34,7 +31,7 @@ class AuthService {
 
     async loginPersonal (user, password){
         try {
-            const res = await fetch('/api/loginempleado', {
+            const res = await fetch(`${process.env.VUE_APP_API}/loginempleado`, {
                 method: 'POST', 
                 headers: {
                     'Accept': 'application/json',
@@ -53,4 +50,5 @@ class AuthService {
             console.log(error)
         }
     }
+
 }

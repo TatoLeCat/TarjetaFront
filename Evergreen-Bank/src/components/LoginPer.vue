@@ -25,7 +25,7 @@
 
 <script setup>
     import { ref } from 'vue';
-    import AuthService from '../Services/AuthService'
+    import  AuthService  from '../Services/AuthService'
 
     let user = ref ("")
     let password = ref ("")
