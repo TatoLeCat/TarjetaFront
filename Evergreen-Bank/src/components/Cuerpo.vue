@@ -10,7 +10,8 @@
             <div class="card container-fluid">
                 <img src="./icons/paraguas.png" class="card-img-top object-fit-fill border rounded" alt="paraguas">
                 <div class="card-body">
-                 <p class="card-text">Texto Aqui</p>
+                 <router-link to="/solicitud" class="card-text">Nueva Solicitud</router-link>
+                 
              </div>
             </div>
          </div>
@@ -38,6 +39,8 @@
 </template>
 
 <script setup>
+import router from '@/router';
+
 
 </script>
 

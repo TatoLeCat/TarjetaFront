@@ -1,10 +1,9 @@
 <template>
   <div>
     <nav class="nav  flex-column position-absolute  start-0">
-    <p class="btn">Registrar Cliente</p>
-    <p class="btn">Nueva Solicitud</p>
-    <p class="btn">Clientes</p>
-    <p class="btn">Cerrar Sesion</p>
+    <router-link to="/register" class="btn">Registrar Cliente</router-link>
+    <router-link to="/clientes" class="btn">Clientes</router-link>
+    <router-link to="/" class="btn">Cerrar Sesion</router-link>
     </nav>
   </div>
 </template>

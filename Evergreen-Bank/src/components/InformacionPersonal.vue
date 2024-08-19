@@ -76,7 +76,10 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue';
+  import { onMounted, ref } from 'vue';
+  import GeneroService from '../Services/GeneroService';
+
+  
     let primerNombre = ref ('')
     let segundoNombre = ref ('')
     let primerApellido = ref ('')
@@ -88,6 +91,14 @@
     let genero = ref ('')
     let estadoCivil = ref ('')
     let ciudad = ref ('')
+
+
+ 
+    let generoLista = ref([])
+    onMounted(async() => {
+        generoLista.value = await GeneroService.traerGenero()
+    })
+  
 
   </script>
   
