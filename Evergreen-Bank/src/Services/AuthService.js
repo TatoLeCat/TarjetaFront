@@ -12,16 +12,16 @@ export default class AuthService {
         return this.session
     }
 
-    async login (user, password){
+    async login (username, password){
         try {
-            const res = await fetch(`${import.meta.env.VITE_API}/logincliente`, {
+            const res = await fetch(`http://${import.meta.env.VITE_API}/logincliente`, {
                 method: 'POST', 
                 headers: {
                     'Accept': 'application/json',
-                    'Content-Type' : 'application/json',
+                    'Content-Type' : 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify({ 
-                    user: user,
+                body: new URLSearchParams({ 
+                    username: username,
                     password : password
                  })
             })
@@ -35,19 +35,20 @@ export default class AuthService {
         }
     }
 
-    async loginPersonal (user, password){
+    async loginPersonal (username, password){
         try {
-            const res = await fetch(`${import.meta.env.VITE_API}/loginempleado`, {
+            const res = await fetch(`http://${import.meta.env.VITE_API}/loginempleado`, {
                 method: 'POST', 
                 headers: {
                     'Accept': 'application/json',
-                    'Content-Type' : 'application/json',
+                  'Content-Type' : 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify({ 
-                    user: user,
+                body: new URLSearchParams({ 
+                    username: username,
                     password : password
                  })
             })
+
 
             const response = await res.json()
             this.session = await response
