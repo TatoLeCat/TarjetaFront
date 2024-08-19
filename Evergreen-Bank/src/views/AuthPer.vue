@@ -1,13 +1,13 @@
 <template>
     <div>
       <cabezera />
-      <Login />
+      <LoginPer />
     </div>
   </template>
   
   <script setup>
   import Cabezera from "../components/Cabezera.vue";
-  import Login from "../components/Login.vue";
+  import LoginPer from "../components/LoginPer.vue";
   
   </script>
   

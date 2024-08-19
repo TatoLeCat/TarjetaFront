@@ -59,10 +59,26 @@ export default class AuthService {
 
             const response = await res.json()
             this.session = await response
-
+            if (this.session =! null){
+                return true
+            } else {
+                return false
+            }
+            
         } catch(error) {
             console.log(error)
         }
+    }
+
+    async logout (){
+        try {
+            const res = await fetch(`http://${import.meta.env.VITE_API}/loginempleado`,{
+                method: 'POST',
+                credentials: 'include'
+            })
+    }catch(error){
+        console.log(error)
+    }
     }
 
 }

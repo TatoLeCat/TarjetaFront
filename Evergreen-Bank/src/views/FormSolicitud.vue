@@ -7,7 +7,6 @@
   
   <script setup>
   import Cabezera from '../components/Cabezera.vue';
-  import BarraLateral from '../components/Lateral.vue'
   import Solicitud from '../components/Solicitud.vue';
   
   </script>

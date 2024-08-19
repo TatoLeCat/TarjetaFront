@@ -3,10 +3,10 @@
     <h1 class="title">Bienvenido</h1>
     <p> ¿Eres un?</p>
 
-    <div class="button-group">
+    <nav>
         <router-link to="/login">Cliente</router-link> |
-        <router-link to="/loginPersonal">Empleado</router-link>
-    </div>
+        <router-link to="/login-personal">Empleado</router-link>
+    </nav>
 
   </div>
 </template>

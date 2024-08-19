@@ -38,7 +38,7 @@ const router = createRouter({
       component: FormSolicitud
     },
     {
-      path: '/loginPersonal',
+      path: '/login-personal',
       name: 'loginPersonal',
       component: AuthPer
     },
@@ -53,7 +53,7 @@ const router = createRouter({
       component: ListaCliente
     },
     {
-      path: '/Transacciones',
+      path: '/transacciones',
       name: 'Transacciones',
       component: ListaSolicitudes
     }
