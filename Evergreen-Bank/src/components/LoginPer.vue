@@ -34,7 +34,7 @@
         const auth = new AuthService()
         const success = await auth.loginPersonal(user.value, password.value)  
         if (success){
-
+            router.push({ name: 'clientes'})
         }else{
             alert("Usuario o contraseña incorrectos")
         }

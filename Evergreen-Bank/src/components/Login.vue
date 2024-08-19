@@ -26,6 +26,7 @@
 <script setup>
     import { ref } from 'vue';
     import AuthService from '../Services/AuthService';
+import router from '@/router';
 
     let user = ref ("")
     let password = ref ("")
@@ -34,7 +35,7 @@
         const auth = new AuthService()
         const success = await auth.login(user.value, password.value)  
         if (success){
-
+            router.push({ name: 'home'})
         }else{
             alert("Usuario o contraseña incorrectos")
         }

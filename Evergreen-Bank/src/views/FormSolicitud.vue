@@ -1,10 +1,7 @@
 <template>
     <div>
       <cabezera />
-      <div class="col-4"> <BarraLateral /> </div>
-      <div class="col-8"> <solicitud /> </div>
-      
-     
+      <solicitud />
     </div>
   </template>
   

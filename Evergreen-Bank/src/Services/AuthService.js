@@ -15,7 +15,8 @@ export default class AuthService {
     async login (username, password){
         try {
             const res = await fetch(`http://${import.meta.env.VITE_API}/logincliente`, {
-                method: 'POST', 
+                method: 'POST',
+                credentials: 'include', 
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type' : 'application/x-www-form-urlencoded',
@@ -28,6 +29,11 @@ export default class AuthService {
 
             const response = await res.json()
             this.session = await response
+            if (this.session =! null){
+                return true
+            } else {
+                return false
+            }
             
 
         } catch(error) {
@@ -38,7 +44,8 @@ export default class AuthService {
     async loginPersonal (username, password){
         try {
             const res = await fetch(`http://${import.meta.env.VITE_API}/loginempleado`, {
-                method: 'POST', 
+                method: 'POST',
+                credentials: 'include', 
                 headers: {
                     'Accept': 'application/json',
                   'Content-Type' : 'application/x-www-form-urlencoded',
